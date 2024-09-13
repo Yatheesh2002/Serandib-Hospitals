@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Serandib Hospitals Pharmacy</title>
+    <link rel="stylesheet" href="style.css"><!--css link-->
+    <link rel="stylesheet" href="manifest.json"><!--manifest link-->
+    <link rel="shortcut icon" href="favicon_io (1)/favicon.ico" type="image/x-icon"><!--favicon icons-->
+</head>
+<body>
+    <header><!--header-->
+        <nav><!--navigation bar-->
+            <div class="nav-container"><!--navigation conatiner-->
+                <a href="index.html" class="logo">
+                    <div class="logoimg"><img src="./Icons/LOGO.jpg" alt=""></div></a>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon"><!--hamburger menu-->
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
+                <ul class="nav-links"><!--navigation links-->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pharmacy.html">Pharmacy</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                </ul>
+            </div>
+        </nav><!--navigation bar ends-->
+    </header><!--header ends-->
+    <div class="formimage-container"><!--image conatiner-->
+        <img src="./Images/pharmacist_1.jpg" alt="form Image" class="formimage-image">
+        <div class="formimage-text">Enojoy 15% Discount For Every Purchase From Our Pharmacy</div><!--text-->
+    </div>
+    <main>
+        <div class="formcontainer"><!--form-->
+            <header>Buy Your Medicine</header><!--form title-->
+            <p>(Only Cash-On Delivery Available)</p><!--delivery methood-->
+            <form action="#" class="form">
+                <div class="formbox">
+                    <label>Full Name</label><!--name-->
+                    <input type="text" placeholder="Enter Full Name">
+                </div>
+                <div class="formbox">
+                    <label>Email Address</label><!--email-->
+                    <input type="text" placeholder="Enter Email Address">
+                </div>
+                <div class="formbox">
+                    <label>Contact Number</label><!--conatct info-->
+                    <input type="text" placeholder="Enter Contact Number">
+                </div>
+                <div class="formbox">
+                    <label>Address</label><!--address-->
+                    <input type="text" placeholder="Enter street address">
+                    <input type="text" placeholder="Enter street address line 2">
+                    <input type="text" placeholder="Enter City">
+                    <input type="text" placeholder="Enter Province">
+                </div>
+                <div class="photo-upload"><!--prescription upload portal-->
+                    <h2>Upload Prescription</h2>
+                    <p>GIve us the prescription from your doctor and we will deliver the medicine to your doorstep !</p>
+                    <form action="#" method="post" enctype="multipart/form-data">
+                        <label for="file-upload" class="custom-file-upload">
+                            Choose Photo
+                        </label>
+                        <input type="file" id="file-upload" name="photo" accept="image/*">
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+                
+                <label>Select Medicine on Your Own</label><!--drop down boxes to select medicine-->
+                <div class="columnform">
+                    <div class="selectbox">
+                        <select>
+                            <option hidden>Fever</option>
+                            <option>None</option>
+                            <option>Paracetamol </option>
+                            <option>Advil</option>
+                            <option>Motrin</option>
+                        </select>
+                    </div>
+                    <div class="selectbox"><!--drop down boxes to select medicine-->
+                        <select>
+                            <option hidden>Painkillers</option>
+                            <option>None</option>
+                            <option>Paracetamol </option>
+                            <option>Advil</option>
+                            <option>Motrin</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="columnform"><!--drop down boxes to select medicine-->
+                    <div class="selectbox">
+                        <select>
+                            <option hidden>Antibiotics</option>
+                            <option>None</option>
+                            <option>Amoxicillin</option>
+                            <option>Azithromycin</option>
+                            <option>Ciprofloxacin</option>
+                        </select>
+                    </div>
+                    <div class="selectbox"><!--drop down boxes to select medicine-->
+                        <select>
+                            <option hidden>Antiseptics</option>
+                            <option>None</option>
+                            <option>Iodine</option>
+                            <option>Ethyl Alcohol </option>
+                            <option>Hydrogen Peroxide</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="columnform"><!--drop down boxes to select medicine-->
+                    <div class="selectbox">
+                        <select>
+                            <option hidden>Stabilizers</option>
+                            <option>None</option>
+                            <option>Mental illness Stabilizers</option>
+                            <option>Cardiovascular Stabilizers</option>
+                            <option>Diabetes Stabilizers</option>
+                        </select>
+                    </div>
+                    <div class="selectbox"><!--drop down boxes to select medicine-->
+                        <select>
+                            <option hidden>Hormonal</option>
+                            <option>None</option>
+                            <option>Hormones for Reproductive Health</option>
+                            <option>Thyroid Hormones</option>
+                            <option>Diabetes Management</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="columnform"><!--drop down boxes to select medicine-->
+                    <div class="selectbox">
+                        <select>
+                            <option hidden>Contraceptives</option>
+                            <option>None</option>
+                            <option>Contraceptive Pill</option>
+                            <option>Contraceptive Injection</option>
+                            <option>Long-Acting Reversible Contraceptives</option>
+                        </select>
+                    </div>
+                </div>
+            <button><a href="thankyou.html">Order Now</a></button><!--order button-->
+            </form>
+        </div>
+    </main> 
+    <footer class="footer"><!--footer-->
+        <div class="ftcontainer">
+            <div class="ftrow">
+                <div class="ftcol"><!--footer-column-1-->
+                    <h1>Hospital</h1>
+                    <ul class="bulletlist">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="pharmacy.html">Pharmacy</a></li>
+                        <li><a href="reservation.html">Reservation</a></li>
+                    </ul>
+                </div>
+                <div class="ftcol"><!--footer-column-2-->
+                    <h1>Help</h1>
+                    <ul class="bulletlist">
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="about.html">Locations</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Copy Rights</a></li>
+                    </ul>
+                </div>              
+                <div class="ftcol"><!--footer-column-3-->
+                    <h1>About Us</h1>
+                    <ul class="bulletlist">
+                        <li><a href="">Contact Information and Location</a></li>
+                    </ul>
+                    <h1>Follow Us</h1><!--media icons-->
+                    <ul class="bulletlist-logo">
+                        <ul class="bulletlist-logo">
+                            <li><a href="https://www.facebook.com/"><img src="./Icons/icons8-facebook-48.png" alt="Facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/"><img src="./Icons/icons8-instagram-48.png" alt="Instagram"></i></a></li>
+                            <li><a href="https://twitter.com/?lang=en"><img src="./Icons/icons8-twitter-48.png" alt="Twitter"></i></a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--footer ends-->
+</body>
+</html>

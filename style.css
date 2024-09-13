@@ -1,0 +1,1726 @@
+/***BODY***/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/***NAVIGATION BAR***/
+
+
+/* Navigation Styles */
+
+nav {
+    background-color:rgb(14, 12, 123);
+    color: #fff;
+    
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    height: auto;
+    
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Hamburger Menu Icon */
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+
+/*Navigation Links*/
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin: 0 5px;
+    height: 50px;
+}
+
+.nav-links a {
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: large;
+    font-weight: 800;
+}
+
+nav a:hover{
+    background-color: white;
+    color: rgb(14, 12, 123);
+}
+
+.logoimg{
+    height: 50px;
+    width: 50px;
+}
+
+/*Responsive Styles*/
+
+@media (max-width: 800px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(14, 12, 123);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 10px 0;
+        height: 500px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+        height: 500px;
+        position: relative;
+        overflow: hidden;
+        
+    }
+
+    .menu-toggle:checked ~ .nav-container .logo {
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2rem; /* You can adjust the size */
+    }
+
+
+
+    /* Hide the logo image */
+    .menu-toggle:checked ~ .nav-container .logoimg {
+        display: none;
+    }
+}
+
+
+/***FOOTER***/
+
+.footer{
+    background-color: black;
+    width: 100%;
+    padding: 10px 0;
+    line-height: 1.5;
+}
+
+.ftcontainer{
+    max-width: 96%;
+    margin: auto;
+}
+
+.ftrow{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ftcol{
+    width: 30%;
+    padding: 0 5px;
+    margin-bottom: 10px;
+    padding-left: 30px;
+}
+
+.ftcol h1{
+    font-size: 20px;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+    position: relative;
+    font-weight: 800;
+}
+
+.ftcol h1:hover{
+    color: rgb(0, 191, 255);
+}
+
+.ftcol h1::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color: white;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.ftcol ul{
+    color: white;
+}
+
+.ftcol ul li a{
+    font-size: 18px;
+    text-transform: capitalize;
+    color: rgb(0, 191, 255);
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    transition: all 0.3s ease;
+    font-weight: 800;
+    text-align: left;
+}
+
+.ftcol ul li a:hover{
+    color: white;
+    padding-left: 10px;
+}
+
+.ftcol li{
+    list-style: none;
+    padding-top: 10px;
+}
+
+.bulletlist ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.bulletlist ul li a:hover{
+    color: black;
+    padding-left: 10px;
+}
+
+.bulletlist li{
+    text-align: left;
+    list-style: circle;
+    padding-top: 10px;
+}
+
+
+/*Media Query*/
+
+@media(max-width: 750px){
+    .ftcol{
+        width: 50%;
+        margin-bottom: 25px;
+    }
+}
+
+
+/***HOME PAGE***/
+
+/*MAIN IMAGE*/
+
+/*Image Slider*/
+
+.slider {
+    width: 100%;
+    max-width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    animation: slide 10s infinite;
+}
+
+.slide {
+    width: 25%;
+    transition: 0.8s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Keyframes for automatic sliding */
+
+@keyframes slide {
+    0% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -100%;
+    }
+    55% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -200%;
+    }
+    80% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: -300%;
+    }
+}
+
+
+/* Responsive design */
+
+@media screen and (max-width: 768px) {
+    .slider {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .slider {
+        height: 200px;
+    }
+}
+
+
+/*Image-text*/
+
+.wave-text {
+    font-size: 6em;
+    font-weight: bold;
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 
+        2px -2px 0 black,
+        -2px 2px 0 black;
+}
+
+.wave-text span {
+    display: inline-block;
+    animation: color-change 8s linear infinite;
+}
+
+.wave-text span img{
+    display: flex;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+}
+
+
+/*Logo Responsiveness*/
+
+@media screen and (max-width: 800px) {
+    .wave-text span img{height: 250px;
+    }
+}
+
+@media screen and (max-width: 775px) {
+    .wave-text span img{height: 200px;
+    }
+}
+
+@media screen and (max-width: 605px) {
+    .wave-text span img{height: 100px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .wave-text span img{height: 50px;
+    }
+}
+
+/* Keyframes for color transformation */
+
+@keyframes color-change {
+    0% {
+        color: rgb(28, 27, 96);
+    }
+    13% {
+        color: rgb(8, 6, 157);
+    }
+    26% {
+        color: rgb(35, 142, 255);
+    }
+    39% {
+        color: rgb(0, 182, 248);
+    }
+    50% {
+        color: rgb(129, 221, 255);
+    }
+    62% {
+        color: rgb(0, 182, 248);
+    }
+    74% {
+        color: rgb(35, 142, 255);
+    }
+    86% {
+        color: rgb(8, 6, 157);
+    }
+    100% {
+        color: rgb(28, 27, 96);
+    }
+
+    
+}
+
+@media screen and (max-width: 1000px) {
+    .wave-text {
+        font-size: 4em;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .wave-text {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .wave-text {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .wave-text {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .wave-text {
+        font-size: .5em;
+    }
+}
+
+
+/*Paragraph*/
+
+.para{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    align-items: center;
+}
+
+.para p{
+    text-align: center;
+    padding: 15px;
+    line-height: 15px;
+    font-size: large;
+}
+
+@media screen and (max-width: 800px) {
+    .para p{
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .para p{
+        font-size: small;
+    }
+}
+
+
+/*BUTTON*/
+
+.bttn{
+    width: 125px;
+    height: 50px;
+    display: flex;
+    margin: auto;
+    align-self: center;
+}
+
+.bttn button{
+    
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    transition: 0.1s;
+    font-size: x-large;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 191, 255);
+}
+
+.bttn button a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+}
+
+.bttn button:hover{
+    color: rgb(0, 191, 255);
+    background-color: black;
+}
+
+.bttn button a:hover{
+    color: rgb(0, 191, 255);
+}
+
+
+/*Section*/
+
+#info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+
+.infocontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1% 0px;
+    flex-wrap: wrap;
+}
+
+.infobox{
+    width: 330px;
+    background-color: white;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.infoimg{
+    width: 100%;
+    height: auto;
+}
+
+.infoimg h3{
+    text-align: center;
+    display: flex;
+    display: block;
+    font-weight: 800;
+    font-size: larger;
+}
+
+.infoimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.infotext{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.infotext p{
+    display: flex;
+    overflow: hidden;
+    color: black;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.infotext a{
+    display: flex;
+    display: block;
+    overflow: hidden;
+    font-size: larger;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    background-color: rgb(70, 188, 235);
+    
+}
+
+.infotext a:hover{
+    background-color: black;
+    color: rgb(70, 188, 235);
+}
+
+
+/*SECTIONS*/
+
+/* Content Section */
+
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.971);
+}
+
+
+/* Image Section */
+
+.image-section {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* Text Section */
+
+.text-section {
+    flex: 1;
+    background-color: black;
+}
+
+.text-section h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.text-section p {
+    font-size: large;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.text-section ul{
+    color: white;
+    font-size: large;
+    text-align: center;
+    
+}
+
+.text-section .learnmore a{
+    display: flex;
+    display: block;
+    overflow: hidden;
+    font-size: larger;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    background-color: rgb(70, 188, 235) ;
+    width: 95%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.text-section .learnmore a:hover{
+    background-color: white;
+    color: black;
+}
+
+
+/* Responsive Styling */
+
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-section, .text-section {
+        padding: 10px;
+    }
+
+    .image-section {
+        padding-bottom: 20px;
+    }
+
+    .text-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-section p {
+        font-size: medium;
+    }
+
+    .view-more-btn {
+        padding: 10px 15px;
+    }
+
+    .text-section ul{
+        font-size: medium;
+    }
+}
+
+
+/*section-Wards*/
+
+.wards{
+    display: flex;
+    width: 100%;
+    padding: 50px 0px;
+    background-color: rgba(61, 164, 215, 0.818);
+}
+
+.wards img{
+    height: auto;
+    width: 35%;
+}
+
+.wardstext{
+    display: flex;
+    width: 55%;
+    flex-direction: column;
+}
+
+.wardshospital{
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.wardstext h5{
+    display: flex;
+    color: black;
+    font-size: xx-large;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.wardstext ol{
+    color: black;
+    text-align: center;
+}
+
+.wardstext ol li{
+    flex-direction: column;
+    text-align: center;
+    font-size: larger;
+    padding-bottom: 20px;
+    font-weight: 600;
+    text-decoration: overline;
+}
+
+
+@media (max-width: 768px){
+    .wardstext h5{
+        font-size: large;
+    }
+    .wardstext ol li{
+        font-size: medium;
+    }
+}
+
+/***ABOUT PAGE***/
+
+
+/* Content Section */
+
+.content-section-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.971);
+}
+
+
+/* Image Section */
+
+.image-section-about {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.image-section-about img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* Text Section */
+
+.text-section-about {
+    flex: 1;
+    background-color: rgb(240, 248, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.971);
+    border-radius: 10px;
+
+}
+
+.text-section-about h2 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.text-section-about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+    font-weight: 500;
+}
+
+.text-section-about .learnmore a{
+    display: flex;
+    display: block;
+    overflow: hidden;
+    font-size: larger;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    background-color: rgb(14, 12, 123);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin: 10px 10px;
+}
+
+.text-section-about .learnmore a:hover{
+    background-color: rgb(33, 123, 153);
+    color: white;
+}
+
+
+/* Responsive Styling */
+
+@media (max-width: 768px) {
+    .content-section-about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-section-about, .text-section-about {
+        padding: 10px;
+    }
+
+    .image-section-about {
+        padding-bottom: 20px;
+    }
+
+    .text-section-about h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-section-about p {
+        font-size: 0.95rem;
+    }
+
+    .view-more-btn {
+        padding: 10px 15px;
+    }
+}
+
+
+/*Map*/
+.map {
+    width: 100%;
+    height: auto; /* Allow height to adjust based on content */
+    display: flex;
+    flex-direction: column; /* Ensure items stack vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 10px; /* Optional padding for spacing */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+.map p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0; /* Remove default margin */
+}
+
+.map iframe {
+    width: 100%; /* Full width of the container */
+    height: 400px; /* Set a fixed height */
+    border: 0;
+    display: block; /* Block display to remove extra spaces */
+    margin-top: 20px;
+    box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .map iframe {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .map iframe {
+        height: 200px; /* Further adjust height for very small screens */
+    }
+}
+
+.location-header{
+    width: 100%;
+    text-align: center;
+    padding: 10;
+    font-size: x-large;
+    background-color: white;
+    color: black;
+}
+
+
+/*Table*/
+
+.sumtable{
+    background-color: rgb(193, 224, 251);
+    color: black;
+    padding: 1% 1% 1% 1%;
+    margin: 5px;
+    font-weight: 500;
+}
+
+.sumtable table tr th{
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.sumtable>table,th,td{
+    border: 2px solid black;
+    align-items: center;
+    text-align: center;
+    padding: 1% 1% 1% 1%;
+}
+
+.sumtable table{
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+/***DOCTORS PAGE***/
+
+
+/*Main*/
+
+.docrow{
+    width: 80%;
+    max-width: 1150px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px 30px;
+}
+
+.docrow .docleft{
+    overflow: hidden;
+}
+
+.docleft img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.docrow .docright{
+    display: flex;
+    align-items: center;
+}
+
+.docright .doccontent{
+    padding-left: 20px;
+}
+
+.doccontent p{
+    font-size: 18px;
+    line-height: 25px;
+    padding-bottom: 15px;
+}
+
+@media(max-width: 900px){
+    .docrow .docright .doccontent{
+        padding-left: 10px;
+    }
+}
+
+@media(max-width: 750px){
+    .docrow{
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/***DOCTORS PAGE***/
+
+
+/*Grid of Doctors*/
+
+.imagegrid{
+    --gap: 16px;
+    --num-cols: 4;
+    --row-height: 400px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols),1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+
+.docgrid{
+    height: 350px;
+}
+
+.imagegrid img{
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.imggrid2x{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.imgtext{
+    width: 100%;
+    height: 100%;
+}
+
+.docgrid h5{
+    padding: 5px;
+    text-align: center;
+}
+
+.imggrid,a,p{
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+/*Responsive design*/
+
+@media screen and (max-width: 1024px){
+    .imagegrid{
+        --num-cols: 2;
+        --row-height: 200px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .imagegrid{
+        --num-cols: 1;
+        --row-height: 200px;
+    }
+    .imggrid2x{
+        --num-cols: 1;
+        --row-height: 200px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .imggrid2x{
+        --num-cols: 1;
+        --row-height: 600px;
+    }
+}
+
+
+/***CONSULTING AND RESERVATION PAGE***/
+
+
+/*Registration Form*/
+
+.formcontainer{
+    position: relative;
+    width: 85%;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px black;
+    margin: 5%;
+    display: block;
+    margin-right: 20px;
+}
+
+.formcontainer header{
+    font-size: xx-large;
+    color: black;
+    font-weight: 800;
+    text-align: center;
+}
+
+.formcontainer .form{
+    margin-top: 30px;
+}
+
+.form .formbox{
+    width: 95%;
+    margin-top: 20px;
+}
+
+.formbox label{
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    font-weight: 500;
+}
+
+.formcontainer label{
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.form :where(.formbox input, .selectbox){
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: large;
+    color: rgb(49, 49, 49);
+    border: 2px solid rgb(42, 42, 42);
+    border-radius: 5px;
+    padding: 0px 15px;
+    margin-top: 10px;
+
+}
+
+.form .columnform{
+    display: flex;
+    column-gap: 60px;
+    width: 95%;
+    margin: 10px;
+}
+
+.form :where(.genderoption, .gender){
+    display: flex;
+    align-items: center;
+    column-gap: 100px;
+    font-size: large;
+    flex-wrap: wrap;
+}
+
+.form .gender{
+    column-gap: 5px;
+    cursor: pointer;
+}
+
+.form :where(.gender input, .gender label){
+    cursor: pointer;
+}
+
+.genderbox{
+    margin-top: 20px;
+}
+
+.genderbox h3{
+    font-size: larger;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.gender label{
+    
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    font-weight: 400;
+}
+
+.form .selectbox{
+    width: 95%;
+}
+
+.selectbox{
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 20px;
+    border: 2px solid black;
+}
+
+.selectbox select{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: black;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+}
+
+.form button{
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: xx-large;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+
+.form button a{
+    color: white;
+    width: 100%;
+}
+
+.form button a:hover{
+    color: black;
+    background-color: rgb(0, 191, 255);
+}
+
+.form button:hover{
+    color: black;
+    background-color: rgb(0, 191, 255);
+}
+
+@media screen and (max-width: 520px){
+    .form .columnform {
+        flex-wrap: wrap;
+    }
+    .form :where(.genderoption, .gender){
+        row-gap: 15px;
+    }
+    .form :where(.genderoption, .gender){
+        column-gap: 0px;
+    }
+    .form :where(.genderoption, .gender){
+        row-gap: 15px;
+    }
+    .formcontainer{
+        width: 80%;
+    }
+    .formbox{
+        width: 90%;
+    }
+    .formcontainer header{
+        font-size: larger;
+    }
+    .formbox label{
+        font-size: medium;
+    }
+    .formcontainer label{
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .formcontainer{
+        width: 70%;
+    }
+    
+    .formbox{
+        width: 70%;
+    }
+}
+
+
+/***PHARAMCY PAGE***/
+
+
+/*Main*/
+
+.pharmacyrow{
+    width: 80%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px 30px;
+}
+
+.pharmacyleft{
+    overflow: hidden;
+}
+
+.pharmacyleft img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pharmacyright{
+    display: flex;
+    align-items: center;
+}
+
+.pharmacycontent{
+    padding-left: 20px;
+}
+
+.pharmacycontent p{
+    font-size: 18px;
+    line-height: 25px;
+    padding-bottom: 15px;
+}
+
+.formcontainer p{
+    text-align: center;
+    font-size: larger;
+    color: white;
+    font-weight: 800;
+    text-decoration: underline;
+    background-color: black;
+}
+
+@media(max-width: 900px){
+    .doccontent{
+        padding-left: 0;
+    }
+}
+
+@media(max-width: 750px){
+    .docrow{
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+}
+
+.photo-upload {
+    width: 90%;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin: 10px;
+}
+
+.photo-upload p{
+    text-align: center;
+    font-size: larger;
+    font-weight: 800;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.custom-file-upload:hover {
+    background-color: #45a049;
+}
+
+input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: large;
+    font-weight: 600;
+}
+
+input[type="submit"]:hover {
+    background-color: #1e88e5;
+}
+
+.formcontainer button{
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: xx-large;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+
+.formcontainer button a{
+    color: white;
+    width: 100%;
+}
+
+.formcontainer button a:hover{
+    color: black;
+    background-color: rgb(0, 191, 255);
+}
+
+.formcontainer button:hover{
+    color: black;
+    background-color: rgb(0, 191, 255);
+}
+
+
+/***SERVICES PAGE***/
+
+.content-section-services {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.971);
+}
+
+
+/* Image Section */
+
+.image-section-services {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.image-section-services img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* Text Section */
+
+.text-section-services {
+    flex: 1;
+    background-color: black;
+}
+
+.text-section-services h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.text-section-services p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.text-section-services .learnmore a{
+    display: flex;
+    display: block;
+    overflow: hidden;
+    font-size: larger;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    background-color: rgb(70, 188, 235) ;
+    width: 95%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.text-section-services .learnmore a:hover{
+    background-color: white;
+    color: black;
+}
+
+
+/* Responsive Styling */
+
+@media (max-width: 768px) {
+    .content-section-services {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-section-services, .text-section-services {
+        padding: 10px;
+    }
+
+    .image-section-services {
+        padding-bottom: 20px;
+    }
+
+    .text-section-services h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-section-services p {
+        font-size: 0.95rem;
+    }
+
+    .view-more-btn {
+        padding: 10px 15px;
+    }
+}
+
+
+/*Service Boxes*/
+
+/*Flex Boxes*/
+
+#infoservice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+
+.servicecontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1% 0px;
+    flex-wrap: wrap;
+}
+
+.servicebox{
+    width: 330px;
+    background-color: white;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.serviceimg{
+    width: 100%;
+    height: auto;
+}
+
+.serviceimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.servicetext{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.servicetext p{
+    display: flex;
+    overflow: hidden;
+    color: black;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.servicetext a{
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    display: block;
+    overflow: hidden;
+    font-size: larger;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    background-color: black;
+}
+
+.servicetext a:hover{
+    background-color: rgb(0, 191, 255);
+    color: black;
+}
+
+
+/***THANK YOU PAGE***/
+
+/* Styles for the image container */
+
+.image-container {
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+/* Styles for the image */
+.image {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+/* Styles for the overlay text */
+.overlay-text {
+    padding: 15px 20px;
+    background-color: rgba(41, 197, 254, 0.7);
+    border-radius: 20px;
+    position: absolute;
+    top: 75%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    border: 3px solid black;
+}
+
+
+/* Responsive styling for overlay text and container */
+.overlay-text a {
+    text-align: center;
+    font-size: larger;
+}
+
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+    .overlay-text {
+        width: 80%;
+        font-size: 1.2rem;
+        top: 85%;
+    }
+
+    .image {
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay-text {
+        width: 90%;
+        font-size: 1rem;
+        top: 90%;
+    }
+}
+
+
+/***Main Image for PHARMACY PAGE and RESERVATION PAGE***/
+
+
+/* Container for the image and overlay text */
+.formimage-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* The image itself */
+.formimage-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Overlay text */
+.formimage-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3vw; /* Adjusts with screen width */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .formimage-text {
+        font-size: 5vw; /* Larger font for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .formimage-text {
+        font-size: 4vw; /* Even larger font for phones */
+        padding: 8px 15px;
+    }
+}
